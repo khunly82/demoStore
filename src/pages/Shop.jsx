@@ -18,7 +18,7 @@ const Shop = () => {
             // enregistrer les données localement
             setProducts(data.map(p => ({ ...p,
                 // nettoie les mauvais caractères des urls de images
-                images: p.images.map(i => i.replace(/\[|\]|/, "").replace("\"", ""))
+                images: p.images.map(i => i.replace(/\[|\]|"/g, ""))
             })))
         });
     }, []);
