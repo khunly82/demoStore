@@ -1,0 +1,29 @@
+nav {
+    width: 300px;
+    height: calc(100vh - 70px);
+    background-color: #CCC;
+    transform: translateX(-300px);
+    transition: transform .7s;
+    top: 70px;
+    position: fixed;
+    &.open {
+        transform: translateX(0);
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            a {
+                height: 50px;
+                display: flex;
+                align-items: center;
+                padding: 0 20px;
+                background: #333333;
+                color: white;
+                text-decoration: none;
+                gap: 0.5em;
+            }
+        }
+    }
+}
