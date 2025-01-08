@@ -10,12 +10,13 @@ const Header = () => {
     // permet de déclencher une action
     const dispatch = useDispatch();
     const open = useSelector(state => state.menu.open);
+    const nbArticles = useSelector(state => state.panier.articles.reduce((prev, current) => prev + current.quantity, 0));
 
     return <header>
         <Button onClick={ () => dispatch(toggleMenu()) }>
             { !open ? <MenuOpen></MenuOpen> : <Close></Close> }
         </Button>
-        <Badge badgeContent={0} color={'primary'}>
+        <Badge badgeContent={nbArticles} color={'primary'}>
             <NavLink to="/panier">
                 <ShoppingCart></ShoppingCart>
             </NavLink>

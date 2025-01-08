@@ -5,6 +5,9 @@ import {useRoutes} from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import Panier from "./pages/Panier.jsx";
 import Shop from "./pages/Shop.jsx";
+import {Alert, Snackbar} from "@mui/material";
+import {useState} from "react";
+import Toast from "./components/Toast.jsx";
 
 function App() {
 
@@ -19,6 +22,7 @@ function App() {
         <Header />
         <Menu />
         <main>{ routes }</main>
+        <Toast />
     </>
   )
 }
